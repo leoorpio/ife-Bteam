@@ -133,7 +133,7 @@
 			<li>排名2</li>
 			<li>排名3</li>
 		</ol>
-		<table border="1">
+		<table border="1" summary="This is a simple table">
 			<thead>
 				<tr>
 					<th>表头</th>
@@ -145,22 +145,22 @@
 				<tr>
 					<td>表内容单元格</td>
 					<td>表内容单元格</td>
-					<td>操作</td>
+					<td><font color="purple">操作</font></td>
 				</tr>
 				<tr>
 					<td>表内容单元格</td>
 					<td>表内容单元格</td>
-					<td>操作</td>
+					<td><font color="purple">操作</font></td>
 				</tr>
 				<tr>
 					<td>表内容单元格</td>
 					<td>表内容单元格</td>
-					<td>操作</td>
+					<td><font color="purple">操作</font></td>
 				</tr>
 				<tr>
 					<td>表内容单元格</td>
 					<td>表内容单元格</td>
-					<td>操作</td>
+					<td><font color="purple">操作</font></td>
 				</tr>
 			</tbody>
 			<tfoot>
@@ -178,37 +178,52 @@
 		<form action="" method="">
 			<p>
 				<label for="email">请输入邮箱地址：</label>
-				<input type="text" name="email" placeholder="这是一个文本输入框" id="email"></input>
+				<input type="text" id="email" name="email" placeholder="这是一个文本输入框" tabindex="1">
 			</p>
-			
+
 			<p>邮箱地址请按要求格式输入</p>
 			<p>
 				<label for="password">请输入密码：</label>
-				<input type="text" name="password" placeholder="这是一个文本输入框" id="password">
+				<input type="password" id="password" name="password" placeholder="这是一个文本输入框" tabindex="2">
 
 				<label for="confirm-password">请重复输入密码：</label>
-				<input type="text" name="confirm-password" placeholder="这是一个文本输入框" id="confirm-password">
+				<input type="password" id="confirm-password" name="confirm-password" placeholder="这是一个文本输入框" tabindex="3">
 			</p>
-
 			<p>密码请为6-16位英文数字</p>
-
-			<input type="radio" name="gender" value="male"  id="male" checked>
+			
+			<label>性别：</label>
+			<input type="radio" name="gender" value="01"  id="male" checked tabindex="4">
 			<label for="male">男</label>
-			<input type="radio" name="gender" value="female" id="female" >
+			<input type="radio" name="gender" value="02" id="female" >
 			<label for="female">女</label>
 
 			<label for="city">城市：</label>
-			<select name="city" id="city">
-				<option value="beijing">北京</option>
+			<select  id="city" name="city" tabindex="5">
+				<option value="beijing" selected>北京</option>
 				<option value="guangzhou">广州</option>
 				<option value="shenzhen">深圳</option>
 				<option value="qingdao">青岛</option>
 				<option value="shanghai">上海</option>
 				<option value="hanghzou">杭州</option>
 			</select>
-
 			
+			<label>爱好：</label>
+			<input type="checkbox" id="sport" name="hobby" value="sport" tabindex="6">
+			<label for="sport">运动</label>
+			<input type="checkbox" id="art" name="hobby" value="art">
+			<label for="art">艺术</label>
+			<input type="checkbox" id="science" name="hobby" value="science">
+			<label for="science">科学</label>
+
+			<label>个人描述：</label>
+			<textarea name="personal-intro" rows="2" tabindex="7">这是一个多行输入框，输入您的个人描述</textarea>
+			
+			<input type="submit" value="确认提交">
 		</form>
+	</div>
+	
+	<div>
+		<span>版权所有&copy;</span>
 	</div>
 	
 </body>
