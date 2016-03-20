@@ -14,60 +14,60 @@ hgroup {
     display: block;
 }
 
-.p-header {
+#header {
 	background-color: #333;
 	overflow: hidden;
 }
 
-.p-header section {
+#header section {
 	width: 1250px;
 	margin: 0 auto;
 }
 
-.p-header img{
+#header img{
 	float: left;
 	margin-top: 10px;
 }
 
-.p-header ul {
+#header ul {
 	float: right;
 }
 
-.p-header ul li {
+#header ul li {
 	float: left;
 	margin-left: 30px;
 }
-.p-header a {
+#header a {
 	color: #fff;
 }
 
-#content {
+#container {
 	background: #dedede;
 	width: auto; 
 	margin: 0px auto;
 	padding-top: 5px;
 }
 
-#content>section {
+#container > section {
 	width: 1250px;
 	margin: 20px auto;  /* 嵌套中的section设定margin，发现父元素section也受影响，与兄弟元素出现空隙，需要设置父元素padding-top: 5px 达到示例图效果*/
 	background-color: #fff;
 	padding: 20px;
 }
 
-#content h3 {
+#container h3 {
 	color: #8f8b89;
 }
 
-#content span {
+#container span {
 	color: #8f8b89;
 }
 
-#content p {
+#container p {
 	text-indent: 2em;
 }
 
-#content > section figure {
+#container > section figure {
 	width: 300px;
 	height: 260px;
 	overflow: hidden;
@@ -76,35 +76,35 @@ hgroup {
 	margin-bottom: 25px;
 }
 
-#content > section figcaption {
+#container > section figcaption {
 	line-height: 50px;
 	text-align: center;
 	font-size: 1.2em;
 }
 
-#content > section figure img {
+#container > section figure img {
 	width: 280px;
 }
 
-#content > section table {
+#container > section table {
 	border-collapse: collapse;
 	width: 1250px;
 }
 
-#content table,
-#content th,
-#content td {
+#container table,
+#container th,
+#container td {
 	border-color: #dae7dd;
 	padding: 8px;
 }
 
-#content > section thead {
+#container > section thead {
 	background-color: #000;
 	color: #fff;
 	text-align: left;
 }
 
-#content > section tfoot {
+#container > section tfoot {
 	background-color: #aaa;
 	font-weight: 700;
 }
