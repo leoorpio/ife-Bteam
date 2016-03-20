@@ -1,4 +1,8 @@
-@charset="utf-8"
+@charset "utf-8"
+
+body {
+	font-family:微软雅黑, Verdana,Geneva, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu, sans-serif;
+}
 
 section,
 article,
@@ -10,31 +14,114 @@ hgroup {
     display: block;
 }
 
-.header {
+.p-header {
 	background-color: #333;
 	overflow: hidden;
 }
 
-.header section {
-	width: 1200px;
+.p-header section {
+	width: 1250px;
 	margin: 0 auto;
-
 }
 
-.header img{
+.p-header img{
 	float: left;
 	margin-top: 10px;
 }
 
-.header ul {
+.p-header ul {
 	float: right;
 }
 
-.header ul li {
+.p-header ul li {
 	float: left;
 	margin-left: 30px;
 }
-.header a {
+.p-header a {
 	color: #fff;
 }
 
+#content {
+	background: #dedede;
+	width: auto; 
+	margin: 0px auto;
+	padding-top: 5px;
+}
+
+#content>section {
+	width: 1250px;
+	margin: 20px auto;  /* 嵌套中的section设定margin，发现父元素section也受影响，与兄弟元素出现空隙，需要设置父元素padding-top: 5px 达到示例图效果*/
+	background-color: #fff;
+	padding: 20px;
+}
+
+#content h3 {
+	color: #8f8b89;
+}
+
+#content span {
+	color: #8f8b89;
+}
+
+#content p {
+	text-indent: 2em;
+}
+
+#content > section figure {
+	width: 300px;
+	height: 260px;
+	overflow: hidden;
+	border: 1px solid #aea7a7;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+#content > section figcaption {
+	line-height: 50px;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+#content > section figure img {
+	width: 280px;
+}
+
+#content > section table {
+	border-collapse: collapse;
+	width: 1250px;
+}
+
+#content table,
+#content th,
+#content td {
+	border-color: #dae7dd;
+	padding: 8px;
+}
+
+#content > section thead {
+	background-color: #000;
+	color: #fff;
+	text-align: left;
+}
+
+#content > section tfoot {
+	background-color: #aaa;
+	font-weight: 700;
+}
+
+.sidebar h2 {
+	width: auto;
+	line-height: 2em;
+	border-left: 4px solid #aaa;
+	padding-left: 0.8em;
+}
+
+.sidebar > form {
+	width: 800px;
+	margin: 0 auto;
+}
+
+
+footer {
+	margin-top: 20px;
+}
