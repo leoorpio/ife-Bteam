@@ -155,23 +155,25 @@
 			<h2>这里以后是一个侧栏，这是侧栏的标题</h2>
 			<form action="" method="">
 				<p>
-					<label for="email">请输入邮箱地址</label>
+					<label for="email" class="label">请输入邮箱地址</label>
 					<input type="text" id="email" name="email" placeholder="这是一个文本输入框" tabindex="1">
 				</p>
 
-				<p>邮箱地址请按要求格式输入</p>
+				<span class="note">邮箱地址请按要求格式输入</span>
+				
 				<p>
-					<label for="password">请输入密码</label>
+					<label for="password" class="label">请输入密码</label>
 					<input type="password" id="password" name="password" placeholder="这是一个文本输入框" tabindex="2">
 				</p>
 				<p>
-					<label for="confirm-password">请重复输入密码</label>
+					<label for="confirm-password" class="label">请重复输入密码</label>
 					<input type="password" id="confirm-password" name="confirm-password" placeholder="这是一个文本输入框" tabindex="3">
 				</p>
-				<p>密码请为6-16位英文数字</p>
+
+				<span class="note">密码请为6-16位英文数字</span>
 				
 				<p>
-					<label>性别</label>
+					<label class="label">性别</label>
 					<input type="radio" name="gender" value="01"  id="male" checked tabindex="4">
 					<label for="male">男</label>
 					<input type="radio" name="gender" value="02" id="female" >
@@ -179,7 +181,7 @@
 				</p>
 				
 				<p>
-					<label for="city">城市</label>
+					<label for="city" class="label">城市</label>
 					<select  id="city" name="city" tabindex="5">
 						<option value="beijing" selected>北京</option>
 						<option value="guangzhou">广州</option>
@@ -191,7 +193,7 @@
 				</p>
 
 				<p>
-				<label>爱好</label>
+				<label class="label">爱好</label>
 				<input type="checkbox" id="sport" name="hobby" value="sport" tabindex="6">
 				<label for="sport">运动</label>
 				<input type="checkbox" id="art" name="hobby" value="art">
@@ -201,8 +203,8 @@
 				</p>
 
 				<p>
-					<label>个人描述</label>
-					<textarea name="personal-intro" rows="2" tabindex="7">这是一个多行输入框，输入您的个人描述</textarea>
+					<label class="label text-label">个人描述</label>
+					<textarea name="personal-intro" rows="5" cols="80" tabindex="7">这是一个多行输入框，输入您的个人描述</textarea>
 				</p>
 				<input type="submit" value="确认提交">
 			</form>

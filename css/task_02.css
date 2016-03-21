@@ -41,11 +41,13 @@ hgroup {
 	color: #fff;
 }
 
+/* 容器 */
 #container {
 	background: #dedede;
 	width: auto; 
 	margin: 0px auto;
 	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 #container > section {
@@ -53,6 +55,8 @@ hgroup {
 	margin: 20px auto;  /* 嵌套中的section设定margin，发现父元素section也受影响，与兄弟元素出现空隙，需要设置父元素padding-top: 5px 达到示例图效果*/
 	background-color: #fff;
 	padding: 20px;
+	border-right: 2px solid #999;
+	border-bottom: 2px solid #999;
 }
 
 #container h3 {
@@ -109,6 +113,11 @@ hgroup {
 	font-weight: 700;
 }
 
+#container .sidebar {
+	position: relative;
+	width: 1230px;
+	left: -10px;
+}
 .sidebar h2 {
 	width: auto;
 	line-height: 2em;
@@ -117,11 +126,45 @@ hgroup {
 }
 
 .sidebar > form {
-	width: 800px;
-	margin: 0 auto;
+	padding-left: 260px;
+/*	border: 1px solid #333;*/
+}
+
+.label {
+/*	border: 1px solid #333;*/
+	display: inline-block;
+	width: 200px;
+	text-align: right;
+	padding-right: 4px;
 }
 
 
+.note {
+	display: inline-block;
+	position: relative;
+	left: 236px;
+}
+
+.text-label{
+	position: relative;
+	top: -100px;
+}
+
+input[type=submit] {
+	width: 1000px;
+	line-height: 30px;
+	position: relative;
+	left: -150px;
+	background-color: #3355D0;
+	border-style: none;
+	border-radius: 0.5em;
+	font-size: 16px;
+	color: #fff;
+}
+
 footer {
-	margin-top: 20px;
+	line-height: 60px;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
 }
