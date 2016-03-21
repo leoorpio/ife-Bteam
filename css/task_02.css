@@ -1,9 +1,48 @@
-@charset "utf-8"
-
-body {
-	font-family:微软雅黑, Verdana,Geneva, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu, sans-serif;
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
 }
 
+body {
+	overflow-x: hidden; 
+}
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
 section,
 article,
 aside,
@@ -16,11 +55,12 @@ hgroup {
 
 #header {
 	background-color: #333;
-	overflow: hidden;
+	height: 50px;
 }
 
-#header section {
-	width: 1250px;
+#header div {
+	width: 1300px;
+	overflow: hidden;
 	margin: 0 auto;
 }
 
@@ -29,6 +69,10 @@ hgroup {
 	margin-top: 10px;
 }
 
+#header nav {
+	line-height: 50px;
+	overflow: hidden;
+}
 #header ul {
 	float: right;
 }
@@ -166,5 +210,9 @@ footer {
 	line-height: 60px;
 	background-color: #000;
 	color: #fff;
-	text-align: center;
+}
+
+footer span {
+	position: relative;
+	left: 600px;
 }
