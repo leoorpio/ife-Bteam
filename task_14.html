@@ -42,7 +42,7 @@ var aqiData = [
  newData.sort(function(a,b){ return b[1]-a[1]});//排序
    for (j in newData){
     el = document.createElement('li');//创建节点
-    el.innerHTML = "第"+(j+1)+"名："+newData[j][0]+","+newData[j][1];//添加节点内的文本
+    el.innerHTML = "第"+(parseInt(j)+1)+"名："+newData[j][0]+","+newData[j][1];//添加节点内的文本
     frag.appendChild(el);//将节点添加到Fragment中
    }
  document.getElementById("aqi-list").appendChild(frag);//在DOM中添加frag
