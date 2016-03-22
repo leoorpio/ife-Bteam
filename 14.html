@@ -32,23 +32,21 @@ var aqiData = [
   将空气质量指数大于60的城市显示到aqi-list的列表中
   */
   var newData = new Array();//声明数组变量
-  var innerHtml="";
+  var frag = document.createDocumentFragment();
   for(i in aqiData){
-      var i;
-      if(aqiData[i][1]>=50){
+      if(aqiData[i][1]>60){
           newData.push(aqiData[i]);//将大于60的数据添加到newData中
       }
   }
   //获取数据
  newData.sort(function(a,b){ return b[1]-a[1]});//排序
    for (j in newData){
-      var j;
-      innerHtml+="<li>第"+(j+1)+"名："+newData[j][0]+","+newData[j][1]+"</li>";
+    el = document.createElement('li');//创建节点
+    el.innerHTML = "第"+(j+1)+"名："+newData[j][0]+","+newData[j][1];//添加节点内的文本
+    frag.appendChild(el);//将节点添加到Fragment中
    }
-   alert(innerHtml );
-   document.getElementById("aqi-list").appendChild(innerHtml);
+ document.getElementById("aqi-list").appendChild(frag);//在DOM中添加frag
 })();
-
 </script>
 </body>
 </html>
