@@ -1,0 +1,50 @@
+body,
+img {
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	border: 1px solid #999;
+	background: #fff;
+}
+
+/* 三栏左右固定 中间自适应   固定 自适应 固定*/
+#container {
+	background-color: #eee;
+	overflow: hidden;
+	margin: 20px;
+	padding: 20px;
+	min-width: 600px;
+}
+
+/*左边栏*/
+.left {
+	float: left;
+	width: 200px;
+	height: 100%;
+}
+
+.left img {
+	width: 80px;
+}
+
+.left span {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 12px;
+}
+
+/*右边栏*/
+.right {
+	width: 80px;
+	height: 500px;
+	float: right;
+}
+
+/*中间栏*/
+.main {
+	margin: 0;
+	margin-left: 220px;
+	margin-right: 142px;
+}
