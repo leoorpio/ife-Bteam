@@ -1,0 +1,100 @@
+body,
+ul,
+ol,
+li,
+form,
+input,
+textarea,
+th,
+td,
+hr,
+button,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+section,
+article,
+aside,
+footer,
+header,
+nav,
+hgroup {
+    display: block;
+}
+
+/* 导航 */
+
+#header {
+	background-color: #333;
+	height: 50px;
+}
+
+#header div {
+	width: 1300px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#header img{
+	float: left;
+	margin-top: 10px;
+}
+
+#header nav {
+	line-height: 50px;
+	overflow: hidden;
+}
+#header ul {
+	float: right;
+}
+
+#header ul li {
+	float: left;
+	margin-left: 30px;
+}
+#header a {
+	color: #fff;
+}
+
+#wrap {
+	background-color: #dedede；
+	width: auto;
+	padding: 5px;
+	position: relative;
+	overflow: hidden;
+}
+
+#container {
+	display: inline-block;
+	float: left;
+	margin-right: 410px; 
+	border: 1px solid #ccc;
+}
+
+#sidebar {
+	display: inline-block;
+	float: right;
+	width: 400px;
+	border: 1px solid #ccc;
+}
+
+#footer {
+	width: 100%;
+	line-height: 5em;
+	background-color: #000;
+	text-align: center;
+}
+
+#footer span {
+	color: #fff;
+}
