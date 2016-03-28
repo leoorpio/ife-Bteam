@@ -32,6 +32,10 @@ hgroup {
     display: block;
 }
 
+body {
+	min-width: 670px;
+	overflow-x: hidden;
+}
 /* 导航 */
 
 #header {
@@ -66,28 +70,129 @@ hgroup {
 	color: #fff;
 }
 
+
 #wrap {
-	background-color: #dedede；
-	width: auto;
-	padding: 5px;
-	position: relative;
+	background-color: #dedede;
 	overflow: hidden;
+
 }
 
-#container {
+#content {
+	margin: 20px;
+	margin-right: 430px;
+}
+
+
+#content article,
+#sidebar {
+	background-color: #fff;
+	padding: 20px;
+	overflow: hidden;
+	box-shadow: 2px 2px 1px #333;
+}
+
+#content article {
+	margin-bottom: 20px;
+	min-width: 172px;
+}
+
+/* 文章中的图片 */
+#content span > img {
 	display: inline-block;
-	float: left;
-	margin-right: 410px; 
+	width: 50%;
+}
+
+#content ul {
+	list-style-type: none; 
+	margin: 20px; 
+}
+
+#content figure {
 	border: 1px solid #ccc;
+	width: 100px;
+	height: auto;
+	text-align: center;
+	padding: 10px;
+	float: left;
+	margin: 25px;
+}
+
+
+figcaption + img {
+	width: 100%;
+}
+
+article ol {
+	margin: 20px;
+}
+
+article table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+article table thead {
+	background-color: #333;
+	color: #fff;
+	text-align: left;
+}
+
+article table tfoot {
+	background-color: #ccc;
 }
 
 #sidebar {
-	display: inline-block;
 	float: right;
-	width: 400px;
-	border: 1px solid #ccc;
+	width: 350px;
+	margin: 20px;
 }
 
+#sidebar h3 {
+	line-height: 2.5em;
+	border-left: 3px solid #ccc;
+	padding-left: 0.8em;
+}
+
+#sidebar form {
+	width: 100%;
+}
+
+#sidebar div > label:first-child {
+	display: inline-block;
+	width: 35%;
+	text-align: right;
+	padding-right: 0.5em;
+}
+
+#sidebar div,
+#sidebar span {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#sidebar span {
+	margin-left: 38%;
+	color: #989898;
+}
+
+#sidebar textarea {
+	vertical-align: top;
+}
+
+#sidebar input {
+	line-height: 1.5em;
+}
+
+#sidebar input[type=submit] {
+	width: 100%;
+	line-height: 1.8em;
+	font-size: 1em;
+	color: #fff;
+	margin: 0 auto;
+	background-color: #3355D0;
+	border-radius: 0.6em;
+	border: none;
+}
 #footer {
 	width: 100%;
 	line-height: 5em;
