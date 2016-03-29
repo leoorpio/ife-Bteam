@@ -1,0 +1,133 @@
+body,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+section,
+article,
+aside,
+footer,
+header,
+nav,
+hgroup {
+    display: block;
+}
+
+#header {
+	width: 892px;
+	height: 61px;
+	margin: 0 auto;
+	border-bottom: 2px solid #938e8c;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	font-size: 12px;
+	font-family: 黑体;
+	margin-bottom: 20px;
+}
+
+#header > span {
+	display: inline-block;
+	width: 110px;
+	height: 61px;
+	background-color: #D55D5C;
+	display: inline-flex;
+	justify-content: center;
+	align-items: flex-end;
+	color: #fff;
+}
+
+#header > time {
+	display: inline-block;
+	justify-content: flex-end;
+	color: #d45d5c;
+}
+
+#wrap {
+	width: 892px;
+	margin: 0 auto;
+}
+
+#wrap .left_container {
+	width: 641px;
+	float: left;
+}
+
+#wrap .right_container {
+	width: 203px;
+	float: right;
+	border-top: 2px solid #cc8091;
+}
+
+#wrap .row_01 {
+	width: 641px;
+	height: 301px;
+	position: relative;
+/*	border: 1px solid #333;*/
+}
+
+#wrap .row_01 span{
+	display: block;
+	width: 191px;
+	height: 301px;
+}
+
+#wrap .row_01 span:nth-child(1) {
+	position: absolute;
+	background-color: #3F9043;
+	opacity: 0.5;
+}
+
+#wrap .row_01 span:nth-child(3) {
+	position: absolute;
+	background-color: #f64b4b;
+	opacity: 0.5;
+	top: 0;
+	right: 0;
+}
+#wrap .right_container p:nth-child(1) {
+	text-decoration: underline; 
+	font-family: 微软雅黑;
+	font-size: 24px;
+	font-variant: small-caps;
+}
+
+#wrap .right_container p:nth-child(2) {
+	font-size: 12px;
+	color: #676767;
+	font-family: 楷体;
+	line-height: 10px;
+}
+
+#wrap .right_container p:nth-child(3) {
+	font-size: 116px;
+	color: #75b86b;
+	font-family: 微软雅黑;
+	font-style: oblique;
+}
+
+#wrap .col_01 {
+	font-size: 55px;
+	color: #cc8091;
+	font-family: 微软雅黑;
+}
+
+#wrap .col_02 {
+	display: inline-block;
+	font-family: 微软雅黑;
+	color: #cc8091;
+} 
+
+#wrap .col_02_row_01 {
+	display: block;
+	font-size: 21px;
+	line-height: 18px;
+}
+
+#wrap .col_02_row_02 {
+	display: block;
+	font-size: 12px;
+	line-height: 10px;
+}

@@ -44,8 +44,7 @@ body {
 }
 
 #header div {
-	width: 1300px;
-	overflow: hidden;
+	width: 97%;
 	margin: 0 auto;
 }
 
@@ -57,9 +56,11 @@ body {
 #header nav {
 	line-height: 50px;
 	overflow: hidden;
+	text-align: right;
 }
+
 #header ul {
-	float: right;
+	display: inline-block;
 }
 
 #header ul li {
