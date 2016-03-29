@@ -108,6 +108,25 @@ hgroup {
 	font-style: oblique;
 }
 
+#wrap .row_02 {
+	margin-top: 30px;
+}
+
+.row_02 .para1,
+.row_02 .para2,
+.row_02 .para3 {
+	width: 30%;
+	height: 100px;
+	margin-right: 3.33%;
+	float: left;
+}
+
+.row_02 .p_title {
+	text-decoration: underline;
+	font-size: 16px;
+	font-family: 微软雅黑;
+}
+
 #wrap .col_01 {
 	font-size: 55px;
 	color: #cc8091;
