@@ -115,8 +115,9 @@ hgroup {
 #up .right_container_01 p:nth-child(3) {
 	font-size: 116px;
 	color: #75b86b;
-	font-family: Microsoft YaHei;
+	font-family: Microsoft YaHei;
 	font-style: oblique;
+	text-decoration: underline;
 }
 
 #up .left_container_01 .row_02 {
