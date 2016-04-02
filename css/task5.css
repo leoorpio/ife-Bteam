@@ -1,0 +1,202 @@
+
+/*@group general styles
+---------------------------------------------------------------------------------------*/
+html, body, div,nav,h1,ul,li{
+	margin: 0;
+	padding: 0;
+}
+h1, h2, p, span  {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+body {
+	background-color: rgb(222,222,222);
+	min-width: 400px;
+}
+/*@group helper styles
+---------------------------------------------------------------------------------------*/
+.clearfloat::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 0;
+	clear: both;
+}
+/*@group page structure
+---------------------------------------------------------------------------------------*/
+header {
+	background: rgb(51,51,51);
+}
+/*导航栏*/
+header nav {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: block;
+}
+header nav h1 {
+	float: left;
+	color: #fff;
+	display: inline-block;
+	line-height: 60px;
+	margin: 0 10px;
+}
+header ul {
+	float: right;
+	height: 60px;
+}
+header ul li {
+	float: left;
+	margin: 0 10px;
+}
+header ul li a {
+	display: inline-block;
+	line-height: 60px;
+	color: #fff;
+	font-size: 10px;
+	text-decoration: none;
+}
+#main {
+	display:block;
+	margin: 0px 385px 0px 0px;
+}
+/*文章*/
+article {
+	display: block;
+	min-width: 360px;
+	background-color: #fff;
+	margin: 20px 20px;
+	-moz-box-sizing:border-box;
+	webkit-box-sizing:border-box;
+	box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 20px;
+	box-shadow: 2px 2px gray;
+	overflow: hidden;
+}
+article >img {
+	width: 20%;
+}
+article h3 {
+	color: gray;
+}
+article >p {
+	font-size: 15px;
+	line-height: 25px;
+}
+.article-inf {
+	color: gray;
+	font-size: 10px;
+}
+article ul {
+	margin-top: 20px;
+	list-style-type:none;
+	text-indent: 20px;
+}
+/*图片组*/
+figure {
+	float: left;
+	width: 120px;
+	border: 1px solid gray;
+	text-align: center;
+}
+figure figcaption {
+	margin: 10px auto;
+	font-size: 10px;
+}
+figure img {
+	max-width: 80%;
+	margin-bottom: 5px;
+}
+article ol li {
+	margin: 10px auto;
+}
+/*表格*/
+table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 10px;
+}
+th,td{
+	text-align: left;
+	padding: 5px;
+	border: 1px solid rgb(204,204,204);
+}
+thead th {
+	color: #fff;
+	background: rgb(51,51,51);
+}
+tfoot td {
+	background: rgb(204,204,204)
+	font-weight: bold;
+}
+
+aside {
+	display: block;
+	width: 360px;
+	float: right;
+	background-color: #fff;
+	margin: 20px 20px;
+	-moz-box-sizing:border-box;
+	webkit-box-sizing:border-box;
+	box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 20px;
+	box-shadow: 2px 2px gray;	
+}
+aside h2{
+	display: block;
+	border-left: 3px solid rgb(204,204,204);
+	padding-left: 10px;
+	font-size: 15px;
+}
+aside h3 {
+	text-align: center;
+	font-size: 15px;
+}
+/*表单*/
+form label {
+	display: inline-block;
+	width: 30%;
+	text-align: right;
+	margin-top: 5px ;
+	font-size: 10px;
+}
+.tip {
+	margin-left: 33%;
+	font-size: 5px;
+	color: rgb(204,204,204);
+}
+input, select {
+	display: inline-block;
+	line-height: 20px;
+	margin: 5px 5px;
+}
+textarea {
+	width: 60%;
+	height: 100px;
+	vertical-align:top;
+	margin: 10px 5px;
+}
+input[type="submit"] {
+	width: 100%;
+	height: 40px;
+	background-color: rgb(51,85,208);
+	border-radius: 10px;
+	color: #fff;
+	font-size: 20px;
+}
+footer {
+	height: 70px;
+	width: 100%;
+	background-color: #000;
+}
+footer p {
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+	line-height: 70px;
+}
+/*@group page components
+---------------------------------------------------------------------------------------*/
+
+/*@group overrides
+---------------------------------------------------------------------------------------*/
