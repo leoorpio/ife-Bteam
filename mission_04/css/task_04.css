@@ -1,0 +1,45 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+/* 
+   容器container长和高固定
+   调节浏览器宽度，灰色元素始终水平居中。
+   调节浏览器高度，灰色元素始终垂直居中。
+*/
+#container {
+	width: 400px;
+	height: 200px;
+	background-color: #ccc;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -200px;
+	margin-top: -100px;
+
+}
+
+.div01,
+.div02 {
+	width: 50px;
+	height: 50px;
+	background-color: #fc0;
+}
+
+.div01 {
+	border-radius: 0 0 400% 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.div02 {
+	border-radius: 400% 0 0 0;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+

@@ -1,0 +1,69 @@
+body,
+h2,
+img {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+div {
+/*	border: 1px solid #999;*/
+	background: #fff;
+}
+
+/* 三栏左右固定 中间自适应   固定 自适应 固定*/
+#container {
+	background-color: #eee;
+	overflow: hidden;
+	margin: 20px;
+	padding: 20px;
+	min-width: 600px;
+}
+
+/*左边栏*/
+.left {
+	float: left;
+	width: 160px;
+	height: 100%;
+	padding: 20px;
+	background-color: #515151;
+}
+
+.left img {
+	display: inline-block;
+	width: 80px;
+}
+
+.left span {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1em;	
+	margin-left: 10px;
+	color: #fff;
+}
+
+/*右边栏*/
+.right {
+	width: 120px;
+	height: 100%;
+	float: right;
+	background-color: #515151;
+}
+
+.right img {
+	width: 80px;
+	margin: 20px;
+	display: block;
+}
+
+/*.right img:last-child {
+	margin-bottom: 20px;
+}
+*/
+/*中间栏*/
+.main {
+	margin: 0;
+	margin-left: 220px;
+	margin-right: 142px;
+	padding: 20px;
+}

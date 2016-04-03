@@ -1,0 +1,208 @@
+body,
+ul,
+ol,
+li,
+form,
+input,
+textarea,
+th,
+td,
+hr,
+button,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	overflow-x: hidden; 
+}
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+section,
+article,
+aside,
+footer,
+header,
+nav,
+hgroup {
+    display: block;
+}
+
+#header {
+	background-color: #333;
+	height: 50px;
+}
+
+#header div {
+	width: 1300px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#header img{
+	float: left;
+	margin-top: 10px;
+}
+
+#header nav {
+	line-height: 50px;
+	overflow: hidden;
+}
+#header ul {
+	float: right;
+}
+
+#header ul li {
+	float: left;
+	margin-left: 30px;
+}
+#header a {
+	color: #fff;
+}
+
+/* 容器 */
+#container {
+	background-color: #dedede;
+	width: auto; 
+	margin: 0px auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#container > section {
+	width: 1250px;
+	margin: 20px auto;  /* 嵌套中的section设定margin，发现父元素section也受影响，与兄弟元素出现空隙，需要设置父元素padding-top: 5px 达到示例图效果*/
+	background-color: #fff;
+	padding: 20px;
+	border-right: 2px solid #999;
+	border-bottom: 2px solid #999;
+}
+
+#container h3 {
+	color: #8f8b89;
+}
+
+#container span {
+	color: #8f8b89;
+}
+
+#container p {
+	text-indent: 2em;
+}
+
+#container > section figure {
+	width: 300px;
+	height: 260px;
+	overflow: hidden;
+	border: 1px solid #aea7a7;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+#container > section ul {
+	list-style-type: none;
+	margin: 20px;
+}
+
+#container > section figcaption {
+	line-height: 50px;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+#container > section figure img {
+	width: 280px;
+}
+
+#container > section ol {
+	margin: 30px;
+}
+
+#container > section table {
+	border-collapse: collapse;
+	width: 1250px;
+}
+
+#container table,
+#container th,
+#container td {
+	border-color: #dae7dd;
+	padding: 8px;
+}
+
+#container > section thead {
+	background-color: #000;
+	color: #fff;
+	text-align: left;
+}
+
+#container > section tfoot {
+	background-color: #aaa;
+	font-weight: 700;
+}
+
+#container .sidebar {
+	position: relative;
+	width: 1230px;
+	left: -10px;
+}
+.sidebar h2 {
+	width: auto;
+	line-height: 2em;
+	border-left: 4px solid #aaa;
+	padding-left: 0.8em;
+}
+
+.sidebar > form {
+	padding-left: 260px;
+/*	border: 1px solid #333;*/
+}
+
+.label {
+/*	border: 1px solid #333;*/
+	display: inline-block;
+	width: 200px;
+	text-align: right;
+	padding-right: 4px;
+}
+
+
+.note {
+	display: inline-block;
+	position: relative;
+	left: 236px;
+}
+
+textarea {
+	vertical-align:top;
+}
+
+input[type=submit] {
+	width: 1000px;
+	line-height: 30px;
+	position: relative;
+	left: -150px;
+	background-color: #3355D0;
+	border-style: none;
+	border-radius: 0.5em;
+	font-size: 16px;
+	color: #fff;
+}
+
+footer {
+	line-height: 60px;
+	background-color: #000;
+	color: #fff;
+}
+
+footer span {
+	position: relative;
+	left: 600px;
+}
