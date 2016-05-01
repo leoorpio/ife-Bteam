@@ -1,0 +1,13 @@
+.aqi-chart-wrap {
+	border: 1px solid #000;
+	width: 1200px;
+	height: 600px;
+	margin: 5px auto;
+	position: relative;
+}
+
+.aqi-bar {
+	position: absolute;
+	bottom: 0;
+	cursor: pointer;
+}
