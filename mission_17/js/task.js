@@ -169,6 +169,7 @@ function citySelectChange(event) {
  */
 function initGraTimeForm() {
   var radio = document.getElementsByName('gra-time');
+  radio[0].checked = 'checked';
   for(var i = 0, len = radio.length; i < len; i++) {
     EventUtil.addHandler(radio[i], 'click', graTimeChange);
   }
