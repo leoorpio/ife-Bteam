@@ -95,7 +95,7 @@ function handleDate(time, city) {
       console.log('-----day-----');
       for(var data in cityDate) {
         count++;
-        tempHtml += '<div class="aqi-bar" style="height:'+cityDate[data]+'px; width:10px; background-color: #000; left:'+(13*count-6)+'px" title="'+data+'，空气污染指数：'+cityDate[data]+'"></div>';
+        tempHtml += '<div class="aqi-bar" style="height:'+cityDate[data]+'px; width:10px; background-color: #000;" title="'+data+'，空气污染指数：'+cityDate[data]+'"></div>';
       }
       count = 0;
       break;
@@ -104,14 +104,14 @@ function handleDate(time, city) {
       var weekData = chartData[city].week,
           tempHtml = '';
       for(var i = 0, lens = weekData.length; i < lens; i++) {
-        tempHtml += '<div class="aqi-bar" style="height:'+weekData[i]+'px; width:50px; background-color: #000; left:'+(60*i+200)+'px" title="第 '+(i+1)+' 周，周平均空气污染指数：'+weekData[i]+'"></div>';
+        tempHtml += '<div class="aqi-bar" style="height:'+weekData[i]+'px; width:50px; background-color: #000;" title="第 '+(i+1)+' 周，周平均空气污染指数：'+weekData[i]+'"></div>';
       }
       break;
     case 'month':
       var monthData = chartData[city].month,
           tempHtml = '';
       for(var i = 0, lens = monthData.length; i < lens; i++) {
-        tempHtml += '<div class="aqi-bar" style="height:'+monthData[i]+'px; width:100px; background-color: #000; left:'+(200*i+400)+'px" title="第 '+(i+1)+' 月，月平均空气污染指数：'+monthData[i]+'"></div>';
+        tempHtml += '<div class="aqi-bar" style="height:'+monthData[i]+'px; width:100px; background-color: #000;" title="第 '+(i+1)+' 月，月平均空气污染指数：'+monthData[i]+'"></div>';
       }
       break;
   }
