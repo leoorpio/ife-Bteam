@@ -32,6 +32,7 @@ function formHandler(event) {
 	return EventUtil.preventDefault(event);
 }
 
+/*浮出层处理函数*/
 function wrapHandler(event) {
 	var event = EventUtil.getEvent(event);
 	var target = EventUtil.getTarget(event);
