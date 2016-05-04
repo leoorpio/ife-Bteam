@@ -3,17 +3,17 @@
  * 2016年4月
  */
 
-var leoor = {};
+var Leoor = {};
 
-leoor.getElement = function(el) {
+Leoor.getElement = function(el) {
 	return document.getElementById(el) || document.getElementsByTagName(el);
 }
 
-var	loginForm = leoor.getElement('login-container'),
-	form = leoor.getElement('myForm'),
-	button = leoor.getElement('button')[0],	// 取得表单中button对象
-	wrap = leoor.getElement('wrapper'),
-	layer = leoor.getElement('layer');
+var	loginForm = Leoor.getElement('login-container'),
+	form = Leoor.getElement('myForm'),
+	button = Leoor.getElement('button')[0],	// 取得表单中button对象
+	wrap = Leoor.getElement('wrapper'),
+	layer = Leoor.getElement('layer');
 
 var isSubmit = {
 	state: ''
