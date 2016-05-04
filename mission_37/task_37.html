@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>task_37：UI组件之浮出层</title>
+	<link rel="stylesheet" type="text/css" href="css/task_37.css">
+</head>
+<body>
+	<div id="container">
+		<div id="login-container">
+			<!-- <form onsubmit=" return validate(this)" method="post" action="javascript:void(0)"> -->
+			<form method="post" action="form.html" id="myForm">
+				<p>
+					<label for="user">用户：<input type="text" name="user" placeholder="your name" id="user" required></label>
+					<!-- <span class="hidden">用户名不能为空</span> -->
+				</p>
+				<p>
+					<label for="pwd">密码：<input type="password" name="password" placeholder="your password" id="pwd" required pattern="^\w{1,}"></label>
+					<!-- <span class="hidden">密码不能为空</span> -->
+				</p>
+				<button type="submit" name="submit-button">登录</button>
+			</form>
+		</div>
+	</div>
+	<div id="wrapper" class="hidden">
+		<div id="layer">
+			<div class="layer-header">登录Tips</div>
+			<div class="layer-main">
+				<span>&emsp;</span>
+			</div>
+			<div class="layer-footer">
+				<button name="yes">确定</button>
+				<button name="no">注销</button>
+			</div>
+		</div>
+		<div id="tips">
+			<span>单击登录Tips层外<br>取消本次登录</span>
+		</div>
+	</div>
+
+<script type="text/javascript" src="js/commonUtil.js"></script>
+<script type="text/javascript" src="js/task_37.js"></script>
+</body>
+</html>
