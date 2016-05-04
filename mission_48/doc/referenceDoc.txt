@@ -1,0 +1,7 @@
+MDN Canvas: https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API
+
+HTML5 游戏引擎列表：https://html5gameengine.com/
+
+How to make a Flappy Bird in HTML5:
+	中文：http://blog.jobbole.com/62203/
+	英文：http://www.gamedevacademy.org/how-to-make-a-flappy-bird-in-html5/

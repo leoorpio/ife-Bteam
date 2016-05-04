@@ -1,0 +1,17 @@
+MDN Canvas: https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API
+
+How to Make a Simple HTML5 Canvas Game: 
+	中文：http://www.cnblogs.com/Wayou/p/how-to-make-a-simple-html5-canvas-game.html
+	英文：http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/
+
+移动端屏幕适配方案：https://github.com/baidu-ife/ife/blob/master/2015_summer/task/game_yangfan_01.md#2-%E4%B8%80%E4%B8%AA%E9%80%82%E9%85%8D%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9A%84%E6%B8%B8%E6%88%8F%E5%9C%BA%E6%99%AF
+
+寻路算法可视化实现：http://qiao.github.io/PathFinding.js/visual/
+
+HTML5 游戏引擎列表：https://html5gameengine.com/
+
+MDN 检测设备方向： https://developer.mozilla.org/zh-CN/docs/Web/API/Detecting_device_orientation
+
+Sprite Animation： http://gamedevelopment.tutsplus.com/tutorials/an-introduction-to-spritesheet-animation--gamedev-13099
+
+游戏精灵图资源 ：http://www.spriters-resource.com/

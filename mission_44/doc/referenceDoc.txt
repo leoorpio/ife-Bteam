@@ -1,0 +1,3 @@
+Jquery.waterfall demo:  http://dfcreative.github.io/projects/waterfall/
+CSS clip-path maker : http://bennettfeely.com/clippy/
+PLACEHOLD.IT 用来占位的不同大小的图片生成工具 : https://placehold.it/

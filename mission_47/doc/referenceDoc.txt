@@ -1,0 +1,7 @@
+MDN Canvas: https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API
+
+HTML5 游戏引擎列表：https://html5gameengine.com/
+
+JavaScript Object Pool：http://blog.sklambert.com/javascript-object-pool/
+
+Galaxian Style HTML5 Game: http://blog.sklambert.com/galaxian-html5-game/
