@@ -80,12 +80,64 @@ var pageWidth = document.documentElement.clientWidth,
 EventUtil.addHandler(wrap, 'click', function(event) {
 	event = EventUtil.getEvent(event);
 	var target = EventUtil.getTarget(event);
-	console.log(target);
+
 	if(target === wrap) {
 		isSubmit.state = 'false';
 		location.reload();
 	}
 })
+
+/*拖动浮出层*/
+var moveElement = document.getElementsByClassName('layer-header')[0],
+	mouse = {
+	preOffsetX: 0,
+	preOffsetY: 0
+};
+
+EventUtil.addHandler(moveElement, 'mousedown', mouseDown);
+EventUtil.addHandler(moveElement, 'mouseup', mouseUp);
+
+function mouseDown(event) {
+	event = EventUtil.getEvent(event);
+	var target = EventUtil.getTarget(event);
+	var pageX = event.pageX,
+		pageY = event.pageY;
+
+	if(pageX === undefined) {
+		pageX = event.clientX + (document.body.scrollLeft || document.documentElement.scrollLeft);
+	}
+
+	if(pageY === undefined) {
+		pageY = event.clientY + (document.body.scrollLeft || document.documentElement.scrollTop); 
+	}
+
+	mouse.preOffsetX = pageX - layer.offsetLeft;
+	mouse.preOffsetY = pageY - layer.offsetTop;
+
+	EventUtil.addHandler(moveElement, 'mousemove', mouseMove);
+}
+
+function mouseMove(event) {
+	var pageX = event.pageX,
+		pageY = event.pageY;
+
+	if(pageX === undefined) {
+		pageX = event.clientX + (document.body.scrollLeft || document.documentElement.scrollLeft);
+	}
+
+	if(pageY === undefined) {
+		pageY = event.clientY + (document.body.scrollLeft || document.documentElement.scrollTop); 
+	}
+
+	curLeft = pageX - mouse.preOffsetX;
+	curTop = pageY - mouse.preOffsetY;
+	layer.style.left = curLeft + 'px';
+	layer.style.top = curTop + 'px';	
+}	
+
+function mouseUp(event) {
+	EventUtil.removeHandler(moveElement, 'mousemove', mouseMove);
+}
 
 function init() {
 	button.disabled = false;
