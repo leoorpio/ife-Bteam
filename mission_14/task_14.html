@@ -38,9 +38,7 @@ var aqiData = [
     if(typeof temp[1] == "number" && temp[1] > 60) {
       arr.push(temp);
     }
-
   }
-
   //根据数值 排序方法一
   function compareNumbers(a, b) {
     return a - b;
@@ -54,10 +52,7 @@ var aqiData = [
     li.appendChild(testNode);
     document.getElementById("aqi-list").appendChild(li);
   }
-
-
 /*
-
   排序方法二：
   function compare(a, b) {
     if(a < b) {
@@ -70,9 +65,6 @@ var aqiData = [
   }
   arr.sort(compare);
 */
-
-
-
 })();
 
 </script>
