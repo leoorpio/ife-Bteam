@@ -50,6 +50,7 @@ Object.defineProperty(Classroom.prototype, 'constructor' , {
 	value: Classroom
 });
 
+// 获取表单元素方法
 var tableHTML = {
 	id: 'table-grade',
 	getTable: function(ele) {
@@ -88,7 +89,14 @@ var tableHTML = {
 		    	col.innerHTML = score;
 		    }
 		    row.insertCell(courses.length+1).innerHTML = subjectScores['总分']; // 取得其课程总分
-			console.log(row);
+		}
+	},
+	renderIconCaret: function() {
+		var tHead = tableHTML.getThead();
+		var row = tHead.rows.item(0); // 取得thead元素 第一行 tr
+		var cells = row.cells;	// 取得所有th单元格
+		for(var i = 1; i < cells.length; i++){
+			console.log(cells.item(i));
 		}
 	}
 };
@@ -103,6 +111,8 @@ function init() {
 	tableHTML.renderThead(courses);
 	// 生成成绩单
 	tableHTML.renderTbody(courses, students);
+	// 生成排序点击按钮
+	tableHTML.renderIconCaret();
 }
 
 init();
