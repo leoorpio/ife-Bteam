@@ -30,12 +30,16 @@ Classroom.prototype = {
 		for(var i = 0; i < this.students.length; i++) {
 			var stu = this.students[i],
 				temp = {};
+			var sum = 0;
 			for(var j = 0; j < this.courses.length; j++) {
 				var c = this.courses[j];
 				temp[c] = Math.floor(Math.random()*40 + 61);
+				sum += temp[c];
 			}
+			temp['总分'] = sum;
 			this.form[stu] = temp;
 			temp = null;
+			sum = 0;
 		};
 		return this.form;
 	}
@@ -56,20 +60,49 @@ var tableHTML = {
 	},
 	getTbody: function(ele) {
 		return document.getElementById(tableHTML.id).tBodies.item(0);
-	}	
+	},
+	renderThead: function(courses) {
+		var headRow = tableHTML.getThead().rows.item(0);
+		var temp = '<th>姓名</th>';
+		for (var i = 0, lens = courses.length; i < lens; i++) {
+		    temp += ('<th>' + courses[i] + '</th>');
+		}
+		temp = temp + '<th>总分</th>';
+		headRow.innerHTML = temp;
+	},
+	renderTbody: function(courses, students) {
+		var tBody = tableHTML.getTbody();
+		// 遍历每一个学生
+		for (var i = 0, slens = students.length; i < slens; i++) {
+		    var student = students[i];
+		    var row = tBody.insertRow(i); // 根据学生数插入行，返回插入行的引用，其中row后面还需要
+		    var cell = row.insertCell(0);// 返回插入单元格引用
+		    cell.innerHTML = student;
+
+		    // 根据学生读取他的成绩单
+		    var subjectScores = form[student];
+		    // 根据课程从成绩单中获取分数
+		    for(j = 0, clens = courses.length; j < clens; j++) {
+		    	var score = subjectScores[courses[j]];
+		    	var col = row.insertCell(j+1);  // 返回要插入单元格的引用，由于第一个单元格是学生姓名，所以需要从第二个单元格开始插入 j+1
+		    	col.innerHTML = score;
+		    }
+		    row.insertCell(courses.length+1).innerHTML = subjectScores['总分']; // 取得其课程总分
+			console.log(row);
+		}
+	}
 };
 
-var tHead = tableHTML.getThead();
-var headRow = tHead.rows.item(0);
-console.log(headRow);
-var temp = '<ul><li><i class="iconfont icon-caret-up">&#xe65b;</i></li><li><i class="iconfont icon-caret-down">&#xe6be;</i></li></ul>';
-headRow.innerHTML = '<th>姓名</th><th>语文'+temp+'</th><th>数学'+temp+'</th><th>英语'+temp+'</th><th>总分'+temp+'</th>';
 // 生成成绩
 function init() {
-	var courses = ['语文','数学','英语'],students = ['A', 'B', 'C', 'D', 'E'];
+	var courses = ['语文','数学','英语'], students = ['A', 'B', 'C', 'D', 'E']; // 输入班级的课程，学生名字即可
 	var classroom = new Classroom(courses, students);
+	// 生成成绩表
 	form = classroom.getScoreForm();
-	console.log(form);
+	// 生成表头
+	tableHTML.renderThead(courses);
+	// 生成成绩单
+	tableHTML.renderTbody(courses, students);
 }
 
 init();
