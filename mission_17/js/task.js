@@ -61,6 +61,8 @@ var aqiSourceData = {
   "沈阳": randomBuildData(500)
 };
 
+console.log(aqiSourceData);
+
 // 用于渲染图表的数据
 var chartData = {};
 
