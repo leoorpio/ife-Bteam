@@ -50,9 +50,11 @@ Object.defineProperty(Classroom.prototype, 'constructor' , {
 	value: Classroom
 });
 
-// 获取表单元素方法
+// 表单元素相关属性、方法
 var tableHTML = {
 	id: 'table-grade',
+	upCaretClass: '.icon-caret-up',
+	downCaretClass: '.icon-caret-down',
 	getTable: function(ele) {
 		return document.getElementById(tableHTML.id);
 	},
@@ -96,11 +98,56 @@ var tableHTML = {
 		var row = tHead.rows.item(0); // 取得thead元素 第一行 tr
 		var cells = row.cells;	// 取得所有th单元格
 		for(var i = 1; i < cells.length; i++){
-			console.log(cells.item(i));
+			cells.item(i).appendChild(insertEleUl());
+		}
+	},
+	addIconListener: function() {
+		// querySelectorAll返回的是类对象HTMLCollections
+		var caretUp = document.querySelectorAll(tableHTML.upCaretClass);
+		var caretDown = document.querySelectorAll(tableHTML.downCaretClass); 
+
+		for(i = 0; i < caretUp.length; i++) {
+			EventUtil.addHandler(caretUp[i], 'click', upOrder);			
+		}
+
+		for(j = 0; j < caretDown.length; j++) {
+			EventUtil.addHandler(caretDown[j], 'click', downOrder);		
 		}
 	}
 };
 
+// 要插入的ul点击按钮元素
+function insertEleUl() {
+	var ul = document.createElement('ul');
+
+	// 插入 上按钮
+	var li_1 = document.createElement('li');
+	var i_1 = document.createElement('i');
+	i_1.className = 'iconfont icon-caret-up';
+	i_1.innerHTML = '&#xe65b;';	//	i_1.appendChild(document.createTextNode('&#xe65b;'));	// 输出的时候，其中'&'会变成转义字符'&amp';
+	li_1.appendChild(i_1);
+	ul.appendChild(li_1);
+
+
+	//插入 下按钮
+	var li_2 = document.createElement('li');
+	var i_2 = document.createElement('i');
+	i_2.className = 'iconfont icon-caret-down';
+	i_2.innerHTML = '&#xe6be;';
+	li_2.appendChild(i_2);
+	ul.appendChild(li_2);
+	return ul;
+};
+
+// 排序up
+function upOrder() {
+	console.log('up');
+}
+// 排序down
+function downOrder() {
+	console.log('down');
+}
+ 
 // 生成成绩
 function init() {
 	var courses = ['语文','数学','英语'], students = ['A', 'B', 'C', 'D', 'E']; // 输入班级的课程，学生名字即可
@@ -113,6 +160,8 @@ function init() {
 	tableHTML.renderTbody(courses, students);
 	// 生成排序点击按钮
 	tableHTML.renderIconCaret();
+	// 为按钮添加监听事件
+	tableHTML.addIconListener();
 }
 
 init();
