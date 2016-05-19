@@ -16,6 +16,10 @@ var form = {
 };
 */
 var form = {};
+var classA = {
+	courses: ['语文','数学','英语'],
+	students: ['A', 'B', 'C', 'D', 'E'],
+}
 
 function Classroom(courses, students) {
 	this.courses = courses;
@@ -45,7 +49,7 @@ Classroom.prototype = {
 	}
 };
 
-Object.defineProperty(Classroom.prototype, 'constructor' , {
+Object.defineProperty(Classroom.prototype, 'constructor', {
 	enumerable: false,
 	value: Classroom
 });
@@ -140,28 +144,86 @@ function insertEleUl() {
 };
 
 // 排序up
-function upOrder() {
+function upOrder(event) {
 	console.log('up');
+	event = EventUtil.getEvent(event);
+	var target = EventUtil.getTarget(event);
+	var orderCource = target.parentNode.parentNode.parentNode.firstChild.nodeValue; //取得th中 #text 文本值
+	var tempArr = [], tempObj = [];
+	for(var o in form) {
+		var stuScores = form[o];
+		tempObj.push(o);
+		tempObj.push(stuScores[orderCource]);
+		tempArr.push(tempObj);
+		tempObj = [];
+	}
+	tempArr.sort(compareUp); // 由高到底排序
+	var orderStu = [];
+	for(var i = 0; i < tempArr.length; i++) {
+		orderStu.push(tempArr[i][0]);
+	}
+	console.log(orderStu);
+	classA.students = orderStu;
+	tableHTML.getTbody().innerHTML = '';
+	tableHTML.renderTbody(classA.courses, classA.students);
 }
 // 排序down
-function downOrder() {
+function downOrder(event) {
 	console.log('down');
+	event = EventUtil.getEvent(event);
+	var target = EventUtil.getTarget(event);
+	var orderCource = target.parentNode.parentNode.parentNode.firstChild.nodeValue; //取得th中 #text 文本值
+	var tempArr = [], tempObj = [];
+	for(var o in form) {
+		var stuScores = form[o];
+		tempObj.push(o);
+		tempObj.push(stuScores[orderCource]);
+		tempArr.push(tempObj);
+		tempObj = [];
+	}
+	tempArr.sort(compareDown); // 由高到底排序
+	var orderStu = [];
+	for(var i = 0; i < tempArr.length; i++) {
+		orderStu.push(tempArr[i][0]);
+	}
+	console.log(orderStu);
+	classA.students = orderStu;
+	tableHTML.getTbody().innerHTML = '';
+	tableHTML.renderTbody(classA.courses, classA.students);
 }
- 
+
+// 排序的方法 
+function compareUp(a, b) {
+	return b[1] - a[1];
+}
+
+function compareDown(a, b) {
+	return a[1] - b[1];
+}
+
 // 生成成绩
 function init() {
-	var courses = ['语文','数学','英语'], students = ['A', 'B', 'C', 'D', 'E']; // 输入班级的课程，学生名字即可
-	var classroom = new Classroom(courses, students);
+	var classroom = new Classroom(classA.courses, classA.students);
 	// 生成成绩表
 	form = classroom.getScoreForm();
 	// 生成表头
-	tableHTML.renderThead(courses);
+	tableHTML.renderThead(classA.courses);
 	// 生成成绩单
-	tableHTML.renderTbody(courses, students);
+	tableHTML.renderTbody(classA.courses, classA.students);
 	// 生成排序点击按钮
 	tableHTML.renderIconCaret();
 	// 为按钮添加监听事件
 	tableHTML.addIconListener();
+	console.log(form);
 }
 
 init();
+
+function getTh() {
+	var tHead = tableHTML.getThead();
+	var row = tHead.rows.item(0);
+	var cell = row.cells;
+	return cell;
+}
+
+console.log(getTh());
