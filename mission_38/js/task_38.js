@@ -1,9 +1,3 @@
-/*
-1.提供生成表格的接口，表格中的数据，表格样式尽量低耦合。
-2.可以配置对哪些列支持排序功能，并在表头进行排序按钮的显示。
-3.提供点击排序按钮后的响应接口，并提供默认的排序方法，当提供的接口没有具体实现时。
-按默认的排序方法进行排序操作，并更新表格中的数据显示。
- */
 
 /* 数据格式演示
 var form = {
@@ -132,7 +126,6 @@ function insertEleUl() {
 	li_1.appendChild(i_1);
 	ul.appendChild(li_1);
 
-
 	//插入 下按钮
 	var li_2 = document.createElement('li');
 	var i_2 = document.createElement('i');
@@ -162,7 +155,6 @@ function upOrder(event) {
 	for(var i = 0; i < tempArr.length; i++) {
 		orderStu.push(tempArr[i][0]);
 	}
-	console.log(orderStu);
 	classA.students = orderStu;
 	tableHTML.getTbody().innerHTML = '';
 	tableHTML.renderTbody(classA.courses, classA.students);
@@ -186,7 +178,6 @@ function downOrder(event) {
 	for(var i = 0; i < tempArr.length; i++) {
 		orderStu.push(tempArr[i][0]);
 	}
-	console.log(orderStu);
 	classA.students = orderStu;
 	tableHTML.getTbody().innerHTML = '';
 	tableHTML.renderTbody(classA.courses, classA.students);
@@ -214,16 +205,6 @@ function init() {
 	tableHTML.renderIconCaret();
 	// 为按钮添加监听事件
 	tableHTML.addIconListener();
-	console.log(form);
 }
 
 init();
-
-function getTh() {
-	var tHead = tableHTML.getThead();
-	var row = tHead.rows.item(0);
-	var cell = row.cells;
-	return cell;
-}
-
-console.log(getTh());
