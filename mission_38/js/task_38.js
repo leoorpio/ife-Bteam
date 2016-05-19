@@ -122,7 +122,7 @@ function insertEleUl() {
 	var li_1 = document.createElement('li');
 	var i_1 = document.createElement('i');
 	i_1.className = 'iconfont icon-caret-up';
-	i_1.innerHTML = '&#xe65b;';	//	i_1.appendChild(document.createTextNode('&#xe65b;'));	// 输出的时候，其中'&'会变成转义字符'&amp';
+	i_1.innerHTML = '&#xe65b;';	//	i_1.appendChild(document.createTextNode('&#xe65b;'));// 输出的时候，其中'&'会变成转义字符'&amp';
 	li_1.appendChild(i_1);
 	ul.appendChild(li_1);
 
