@@ -1,0 +1,9 @@
+
+#wrap {
+	width: 700px;
+	height: 700px;
+	margin: 5em auto;
+	border: 1px dashed #000;
+	box-sizing: border-box;
+	padding: 2em;
+}
