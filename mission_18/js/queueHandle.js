@@ -1,7 +1,6 @@
 // var arr = [] 
 // 输入的内容是一个数字：排除是英文，中文等的情况 var pattern = /^[0-9]\d*/
 // 使用事件委托
-// 建议用最新的浏览器（Firefox、chrome运行）
 
 (function() {
 	var arr = [],
