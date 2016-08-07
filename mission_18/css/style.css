@@ -7,3 +7,45 @@
 	box-sizing: border-box;
 	padding: 2em;
 }
+
+section:nth-of-type(3) {
+	clear: both;
+}
+
+#tips {
+	display: inline-block;
+	line-height: 1.2em;
+	margin-top: 0.6em;
+	font-style: italic;
+	color: blue;
+}
+
+#inputBtn,
+#deleteBtn {
+	width: 50%;
+	float: left;
+}
+
+#inputShow {
+	box-sizing: border-box;
+	margin: 1em;
+}
+
+#inputShow ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+  overflow: hidden;
+	font-size: 1.5em;
+}
+
+#inputShow ul li {
+	display: block;
+	float: left;
+	margin-right: 0.2em;
+	padding: 0.2em;
+	border: 1px solid #999;
+	background-color: red;
+  color: #fff;
+	cursor: pointer;
+}

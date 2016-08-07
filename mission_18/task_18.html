@@ -7,20 +7,20 @@
 </head>
 <body>
 	<div id="wrap">
-		<section id="handleBtn">
+		<section id="inputBtn">
 			<input type="input" name="queue">
 			<input type="button" value="左侧入" data-order="leftin">
 			<input type="button" value="右侧入" data-order="rightin">
+		</section>
+		<section id="deleteBtn">
 			<input type="button" value="左侧出" data-order="leftout">
 			<input type="button" value="右侧出" data-order="rightout">
 		</section>
-
 		<section>
-			<ul>
-				<li></li>
-			</ul>
+			<span id="tips"></span>
 		</section>
-
+		<section id="inputShow">
+		</section>
 	</div>
 	<script type="text/javascript" src="js/commonUtil.js"></script>
 	<script type="text/javascript" src="js/queueHandle.js"></script>
